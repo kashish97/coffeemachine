@@ -1,6 +1,6 @@
 # Coffee Machine 
 
-<img src = "https//github.com/kashish97/coffeemachine/blob/master/classdgm.jpeg" />
+![classdgm](https://user-images.githubusercontent.com/29833770/106259070-bb9f2780-6244-11eb-882f-4fa9c1ce13a6.jpeg)
 
 <b>This project contains the following PACKAGES:</b>
 
