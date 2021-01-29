@@ -75,7 +75,6 @@ public class JsonParser {
 
                 if(canBePrepared) {
                     Beverage beverage = new Beverage(drink, ingredientMap);
-                    System.out.println("====>" + beverage.getBeverageName());
                     beverageList.add(beverage);
                     System.out.println(coffeeMachine.startServingBeverage(beverage, inventory));
                 }
