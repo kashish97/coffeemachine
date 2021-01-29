@@ -5,7 +5,6 @@ import com.dunzo.coffeemachine.beverages.*;
 import com.dunzo.coffeemachine.inventory.*;
 import com.google.gson.*;
 import org.json.simple.*;
-import org.junit.platform.commons.function.*;
 
 import java.io.*;
 import java.util.*;
@@ -68,8 +67,6 @@ public class JsonParser {
                     else{
                         canBePrepared = false;
                         System.out.println(drink+" cannot be prepared because "+name+" is not available");
-
-
                     }
                 }
 
@@ -77,6 +74,26 @@ public class JsonParser {
                     Beverage beverage = new Beverage(drink, ingredientMap);
                     beverageList.add(beverage);
                     System.out.println(coffeeMachine.startServingBeverage(beverage, inventory));
+                    System.out.println("Do you want to refill any ingredient(y/n)");
+                    Scanner s = new Scanner(System.in);
+                    String out = s.next();
+                    if(out.equalsIgnoreCase("y")){
+                        System.out.println("Enter Ingredient Name");
+                        String ingName = s.next();
+                        if (inventory == null || inventory.getIngredients() == null || inventory.getIngredients().size() == 0) {
+                            System.out.println("Kindly Upload input File First");
+                        } else {
+                            Ingredient ing = inventory.getIngredients().stream().filter(i -> i.getIngredientName().equalsIgnoreCase(ingName)).findAny().orElse(null);
+                            if (ing != null) {
+                                System.out.println("Enter Quantity(in double)");
+                                double qty = Double.parseDouble(s.next());
+                                ing.refillIngredient(qty);
+                            } else {
+                                System.out.println("No Such Ingredient Found");
+                            }
+                        }
+                    }
+
                 }
             }
 
