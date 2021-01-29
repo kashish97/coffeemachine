@@ -1,6 +1,6 @@
 # Coffee Machine 
 
-<img src = "https"//github.com/kashish97/coffeemachine/blob/master/classdgm.jpeg />
+<img src = "https//github.com/kashish97/coffeemachine/blob/master/classdgm.jpeg" />
 
 <b>This project contains the following PACKAGES:</b>
 
