@@ -21,7 +21,7 @@ json-simple.jar - for parsing the json input
 
 STEPS TO RUN ON YOUR LOCAL MACHINE:
 
-1.) fork this repository.
+1.) fork this repository.<br>
 2.) add external libraries - download the jar and add to the project.
 3.) run Main.java
 4.) the output will ask for the json path- enter the path so as to execute it successfully.
